@@ -22,6 +22,7 @@ function main(
   userstatus,
   remember_me
 ) {
+  localStorage.setItem("usertype", usertype);
   let UM_Auth = {
     user_id,
     username,

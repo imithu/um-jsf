@@ -6,8 +6,10 @@
  * @author  mit
  */
 function main() {
-  localStorage.removeItem("UM_User_Authentication");
-  sessionStorage.removeItem("UM_User_Authentication");
+  if (localStorage.getItem("UM_User_Authentication") !== null)
+    localStorage.removeItem("UM_User_Authentication");
+  if (sessionStorage.getItem("UM_User_Authentication") !== null)
+    sessionStorage.removeItem("UM_User_Authentication");
 }
 
 export default main;
